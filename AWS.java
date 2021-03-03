@@ -55,5 +55,16 @@ public class AWS {
 		}
 		values = newArray;
 	}
+	public int removeBiggerThan(int threshold) {
+		int count = 0;
+		
+		for(int i=0;i<this.values.length;++i) {
+			if(this.values[i]>threshold) {
+				count +=1;
+				this.values[i] = FILLER_VALUE;
+			}
+		}
+		return count;
+	}
 
 }
