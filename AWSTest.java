@@ -94,6 +94,7 @@ class AWSTest {
 		
 	
 	}
+	// added MATH.abs()
 	@Test
 	void testFillAndExpandWithNegative() {
 		int position = 1;
@@ -102,7 +103,7 @@ class AWSTest {
 		int[] org = originalAWS.getValues();
 		int expectedValue = org[position];
  		int first = org[0];
-		int expected = originalAWS.getValues().length + numberOfTimes;
+		int expected = originalAWS.getValues().length + MATH.abs(numberOfTimes);
 		originalAWS.fillAndExpand(position, numberOfTimes);
 		int[] result = originalAWS.getValues();
 		assertEquals(expected, result.length);
@@ -118,6 +119,37 @@ class AWSTest {
 
 	
 	}
+	//added testRemoveBiggerThanFail() test
+	@Test
+	void testRemoveBiggerThanFail() {		
+		int[] x= {2,6,8,3,4,7};
+		originalAWS = new AWS(x);
+		int threshold = 5;
+		int expectedcount = 3;
+		int[] org = originalAWS.getValues();
+		int expectedvalue = FILLER_VALUE;
+		int resultcount = originalAWS.removeBiggerThan(threshold);
+		int[] resultvalue = originalAWS.getValues();
+		assertEquals(expectedcount , resultcount);
+		assertEquals(expectedvalue, resultvalue[1]);
+		assertEquals(expectedvalue, resultvalue[2]);
+		assertNotEquals(expectedvalue, resultvalue[5]);
+		
+	}
+	// added testStepMultiplierFail()  test
+	@Test
+	void testStepMultiplierFail() {
+		int[] x = {5,11,50};
+		AWS aws = new AWS(x);
+		int expected1 = 5*2;
+		int expected2 = 11*4;
+		int expected3 = 50*100;
+		aws.stepMultiplier();
+		int[] result = aws.getValues();
+		assertEquals(expected1, result[0]);
+		assertEquals(expected2, result[1]);
+		assertNotEquals(expected3, result[2]);
+		}
 
 
 }
