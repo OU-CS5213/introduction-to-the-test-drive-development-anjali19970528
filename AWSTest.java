@@ -119,9 +119,9 @@ class AWSTest {
 
 	
 	}
-	//added testRemoveBiggerThanFail() test
+	//added testRemoveBiggerThan() test
 	@Test
-	void testRemoveBiggerThanFail() {		
+	void testRemoveBiggerThan() {		
 		int[] x= {2,6,8,3,4,7};
 		originalAWS = new AWS(x);
 		int threshold = 5;
@@ -133,12 +133,12 @@ class AWSTest {
 		assertEquals(expectedcount , resultcount);
 		assertEquals(expectedvalue, resultvalue[1]);
 		assertEquals(expectedvalue, resultvalue[2]);
-		assertNotEquals(expectedvalue, resultvalue[5]);
+		assertEquals(expectedvalue, resultvalue[5]);
 		
 	}
-	// added testStepMultiplierFail()  test
+	// added testStepMultiplier()  test
 	@Test
-	void testStepMultiplierFail() {
+	void testStepMultiplier() {
 		int[] x = {5,11,50};
 		AWS aws = new AWS(x);
 		int expected1 = 5*2;
@@ -148,7 +148,7 @@ class AWSTest {
 		int[] result = aws.getValues();
 		assertEquals(expected1, result[0]);
 		assertEquals(expected2, result[1]);
-		assertNotEquals(expected3, result[2]);
+		assertEquals(expected3, result[2]);
 		}
 
 
