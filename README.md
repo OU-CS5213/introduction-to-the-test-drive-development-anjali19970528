@@ -33,6 +33,8 @@ Third commit : added testRemoveBiggerThan(int threshold) method to AWS.java  and
 
 Fourth commit : added stepMultiplier() method to AWS.java  and checked the check box in part 3.
 
-Fifth commit : corrected the testGetValues() method
+Fifth commit : corrected the testGetValues() test
 
-commit 6 : corrected the testSetValues() method
+commit 6 : corrected the testSetValues() test
+
+commit 7 : corrected the testToString() test
