@@ -18,3 +18,9 @@ You will make frequent commits:
 * [ ] Create unit tests for **removeBiggerThan(int threshold)**
 * [ ] Create a method **stepMultiplier()** in the AWS class that will multiply all values less than 10 by 2, and all values that are less than 20 and bigger than 10 by 4, and all values that are less than 100 and bigger than 20 by 100;
 * [ ] Create a unit tests for **stepMultiplier()**
+
+
+
+First commit :  1. corrected testFillAndExpandWithNegative() testcase
+		2. added testRemoveBiggerThanFail() testcase which fails
+		3. added testStepMultiplierFail() testcase which fails
