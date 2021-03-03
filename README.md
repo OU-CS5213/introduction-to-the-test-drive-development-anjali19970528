@@ -24,3 +24,7 @@ You will make frequent commits:
 First commit :  1. corrected testFillAndExpandWithNegative() testcase
 		2. added testRemoveBiggerThanFail() testcase which fails
 		3. added testStepMultiplierFail() testcase which fails
+
+Second commit : 1. added testRemoveBiggerThan() test
+                2. added testStepMultiplier() test
+
