@@ -55,5 +55,32 @@ public class AWS {
 		}
 		values = newArray;
 	}
+	public int removeBiggerThan(int threshold) {
+		int count = 0;
+		
+		for(int i=0;i<this.values.length;++i) {
+			if(this.values[i]>threshold) {
+				count +=1;
+				this.values[i] = FILLER_VALUE;
+			}
+		}
+		return count;
+	}
+	public void stepMultiplier() {
+		//values[0] = values[0]*2;
+		//values[1] = values[1]*4;
+		//values[2] = values[2]*100;
+		for(int i=0;i<values.length;++i) {
+			if(values[i] < 10) {
+				values[i] = values[i]*2;
+			}
+			else if(values[i]>=10 && values[i] < 20) {
+				values[i] = values[i]*4;
+			}
+			else if(values[i]>=20 && values[i] < 100) {
+				values[i] = values[i]*100;
+			}
+		}
+	}
 
 }
