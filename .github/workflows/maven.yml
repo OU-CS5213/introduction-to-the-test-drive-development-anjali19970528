@@ -22,5 +22,5 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: |
-        cd src
+        cd SEPHW2
         mvn test
